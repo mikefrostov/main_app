@@ -36,62 +36,64 @@
 
 
         <!-- Author -->
-        <p class="lead">
-	<a href="http://blog.cheapestdomainever.club/">http://blog.cheapestdomainever.club/</a>
-        <h5> repo: </h5>
-	<a href="http://github.com/mikefrostov/nodejs_blogapp">http://github.com/mikefrostov/nodejs_blogapp</a>
-        </p>
+
+	<h2><a href="http://blog.cheapestdomainever.club/">Look at it</a></h2>
+	<hr>
+	<h3><a href="http://github.com/mikefrostov/nodejs_blogapp">See the Repository</a></h3>
 
         <hr>
 
 
         <!-- Preview Image -->
-        <img class="img-fluid rounded" src="nodejs_blogapp.png" alt="">     
+        <img class="img-fluid rounded" src="nodejs_blogapp.png" alt="">
         <!-- Post Content -->
-        <hr> 
-	<p class="lead"> This project evolved from a job interview task, where I had to implement hello world app that may be containerized and deployed to a kubernetes along with metrics. App includes: </p>
+	<p class="lead"> This project has evolved from a job interview task, where I had to implement hello world app that may be containerized and deployed to a kubernetes along with metrics. App includes: </p>
 
-        <ul> 
-		<li> server.js has an export enpoint for prometheus </li>
+        <ul>
+		<li> server.js is an entrypoint that has an export enpoint available at /metrics for prometheus </li>
 		<li> Dockerfile for app dockerization </li>
 		<li> Dockerfile has a healthcheck of an app for kubernetes </li>
-		<li> test folder contains mocha helloworld test for CI </li> 
+		<li> test folder contains mocha helloworld test for CI </li>
 		<li> docker-compose.yml that brings up prometheus and grafana containers along with the container for the app itself. </li>
 		<li> prometheus.yml configuration file </li>
 		<li> grafana folder with mountpoints and a dashboard </li>
 		<li> public/ folder with bootstrap and other assets </li>
-		<li> deployment-kube.yml for app deployment to a kuberenetes cluster </li> 
-                
+		<li> deployment-kube.yml for app deployment to a kuberenetes cluster or minikube </li>
+
 	</ul>
 
 
-        <hr>
-         <!-- Preview Image -->
-        <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
 
         <hr>
 
+        <p class="lead"> The app is being built after a commit is pushed to a Github repo. Webhook is issued to the Jenkins instance. </p>
+	<img class="img-fluid rounded" src="nodejs_blogapp_webhook.png" alt="">
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
-
-        <blockquote class="blockquote">
-          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-          <footer class="blockquote-footer">Someone famous in
-            <cite title="Source Title">Source Title</cite>
-          </footer>
-        </blockquote>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
 
         <hr>
 
+
+	<p class="lead"> Jenkins runs an item "nodejs_blogapp" that runs a helloworld mocha test and triggers another item "deploy_nodejs_blogapp" that ssh'es to the baremetal machine using a preinstalled key and issues git pull and rebuilds the docker image. </p>
+
+       <img class="img-fluid rounded" src="jenkins-pipeline.png" alt="">
+
+       <hr>
+
+        <img class="img-fluid rounded" src="jenkins_deploy_nodejs_blogapp.png" alt="">
+
+      	<hr>
+        <img class="img-fluid rounded" src="nodejs_build_script.png" alt="">
+
+        <hr>
+
+
+        <p class="lead"> The script filters the container ID by the tag name and removes it. New one is built instead and run. The connections are handled by the <a href="#"> reverse proxy </a></p>
+
+        <hr>
+<br>
 
 
 </div>
 </body>
 </html>
-

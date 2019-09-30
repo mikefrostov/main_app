@@ -48,6 +48,10 @@ router.get("/ftp",function(req,res){
   res.sendFile(path + "ftp.html");
 });
 
+router.get("/rvproxy",function(req,res){
+  res.sendFile(path + "rvproxy.html");
+});
+
 var publicDir = require('path').join(__dirname,'/views/public');
 app.use(express.static(publicDir));
 
