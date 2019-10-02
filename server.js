@@ -20,8 +20,20 @@ router.get("/contact",function(req,res){
   res.sendFile(path + "contact.html");
 });
 
-router.get("/nodejs_blogapp",function(req,res){
-  res.sendFile(path + "nodejs_blogapp.html");
+router.get("/nodejs-blogapp",function(req,res){
+  res.sendFile(path + "nodejs-blogapp.html");
+});
+
+router.get("/php",function(req,res){
+  res.sendFile(path + "php.html");
+});
+
+router.get("/python-flask",function(req,res){
+  res.sendFile(path + "python-flask.html");
+});
+
+router.get("/python-flask-microsvc",function(req,res){
+  res.sendFile(path + "python-flask-microsvc.html");
 });
 
 router.get("/jenkins",function(req,res){
@@ -32,16 +44,12 @@ router.get("/grafana",function(req,res){
   res.sendFile(path + "grafana.html");
 });
 
-router.get("/contact",function(req,res){
-  res.sendFile(path + "grafana.html");
-});
-
 router.get("/sitik",function(req,res){
   res.sendFile(path + "sitik.html");
 });
 
-router.get("/devops_lab",function(req,res){
-  res.sendFile(path + "devops_lab.html");
+router.get("/home-lab",function(req,res){
+  res.sendFile(path + "home-lab.html");
 });
 
 router.get("/ftp",function(req,res){
@@ -51,6 +59,34 @@ router.get("/ftp",function(req,res){
 router.get("/rvproxy",function(req,res){
   res.sendFile(path + "rvproxy.html");
 });
+
+router.get("/elk",function(req,res){
+  res.sendFile(path + "elk.html");
+});
+
+router.get("/hadoop",function(req,res){
+  res.sendFile(path + "hadoop.html");
+});
+
+router.get("/cloud",function(req,res){
+  res.sendFile(path + "cloud.html");
+});
+
+router.get("/zabbix",function(req,res){
+  res.sendFile(path + "zabbix.html");
+});
+
+router.get("/kubernetes",function(req,res){
+  res.sendFile(path + "kubernetes.html");
+});
+
+router.get("/docker",function(req,res){
+  res.sendFile(path + "docker.html");
+});
+
+
+
+
 
 var publicDir = require('path').join(__dirname,'/views/public');
 app.use(express.static(publicDir));
