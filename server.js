@@ -88,6 +88,9 @@ router.get("/koareact",function(req,res){
   res.sendFile(path + "koareact.html");
 });
 
+router.get("/postgres",function(req,res){
+  res.sendFile(path + "postgres.html");
+});
 
 
 

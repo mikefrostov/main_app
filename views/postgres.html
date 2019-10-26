@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Single page web app using Angularjs</title>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</head>
+<body>
+<div>
+<div>
+<nav class="navbar navbar-inverse" role="navigation" style="padding-left:130px;">
+       <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contacts</a></li>
+    </ul>
+</nav>
+</div>
+
+
+<!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <h1 class="mt-4"> Postgres replication </h1>
+
+        <hr>
+
+       <hr>
+
+        <hr>
+	<p class="lead"> This project has evolved from a job interview task, where I had to implement hello world app that may be containerized and deployed to a kubernetes along with metrics. App includes: </p>
+	
+
+        <ul>
+		<li> https://github.com/wharton/python-vagrant-centos7 </li>
+	</ul>
+        <img class="img-fluid rounded" src="vagrant-postgres.png" alt="">
+       <hr>
+
+        <img class="img-fluid rounded" src="vagrantboxes.png" alt="">
+
+
+       <hr>
+        <img class="img-fluid rounded" src="slave_database.png" alt="">
+
+       <hr>
+	<img class="img-fluid rounded" src="slave_wal_senders.png" alt="">
+
+       <hr>
+	<img class="img-fluid rounded" src="pg_hba.png" alt="">
+
+
+       <hr>
+	<img class="img-fluid rounded" src="wal_mode.png" alt="">
+
+
+
+        <hr>
+
+
+	<p class="lead"> Jenkins runs an item "nodejs_blogapp" that runs a helloworld mocha test and triggers another item "deploy_nodejs_blogapp" that ssh'es to the baremetal machine using a preinstalled key and issues git pull and rebuilds the docker image. </p>
+
+
+
+
+      	<hr>
+
+        <img class="img-fluid rounded" src="postgrestrello.png" alt="">
+        <hr>
+
+
+        <p class="lead"> The script filters the container ID by the tag name and removes it. New one is built instead. The connections are handled by the <a href="/rvproxy"> reverse proxy </a></p>
+
+
+        <ul>
+		<li> https://github.com/wharton/python-vagrant-centos7 </li>
+	</ul>
+        <hr>
+<br>
+
+
+</div>
+</body>
+</html>
