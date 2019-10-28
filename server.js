@@ -92,6 +92,9 @@ router.get("/postgres",function(req,res){
   res.sendFile(path + "postgres.html");
 });
 
+router.get("/jquery",function(req,res){
+  res.sendFile(path + "jquery.html");
+});
 
 
 var publicDir = require('path').join(__dirname,'/views/public');
