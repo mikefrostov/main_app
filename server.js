@@ -96,6 +96,45 @@ router.get("/jquery",function(req,res){
   res.sendFile(path + "jquery.html");
 });
 
+router.get("/vagrant",function(req,res){
+  res.sendFile(path + "vagrant.html");
+});
+
+router.get("/prometheus",function(req,res){
+  res.sendFile(path + "prometheus.html");
+});
+
+router.get("/nas",function(req,res){
+  res.sendFile(path + "nas.html");
+});
+
+router.get("/sqlite",function(req,res){
+  res.sendFile(path + "sqlite.html");
+});
+
+
+router.get("/mysql",function(req,res){
+  res.sendFile(path + "mysql.html");
+});
+
+router.get("/vagrant",function(req,res){
+  res.sendFile(path + "vagrant.html");
+});
+
+router.get("/virtualization",function(req,res){
+  res.sendFile(path + "virtualization.html");
+});
+
+router.get("/ansible",function(req,res){
+  res.sendFile(path + "ansible.html");
+});
+
+router.get("/gitlabci",function(req,res){
+  res.sendFile(path + "gitlabci.html");
+});
+
+
+
 
 var publicDir = require('path').join(__dirname,'/views/public');
 app.use(express.static(publicDir));
