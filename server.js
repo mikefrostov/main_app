@@ -133,7 +133,9 @@ router.get("/gitlabci",function(req,res){
   res.sendFile(path + "gitlabci.html");
 });
 
-
+router.get("/python-linked",function(req,res){
+  res.sendFile(path + "python-linked.html");
+});
 
 
 var publicDir = require('path').join(__dirname,'/views/public');
